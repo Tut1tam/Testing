@@ -29,9 +29,9 @@ def equation():
 def matrix():
     mat1, mat2 = [[1, 2, 3], [4, 5, 6]], [[9, 8, 7], [6, 5, 4]]
     matrix = Matrix(mat1, mat2)
-    matrix.draw_matrix()
-    matrix.sum_matrix()
-    matrix.dif_matrix()
+    print(matrix.draw_matrix())
+    print(matrix.sum_matrix())
+    print(matrix.dif_matrix())
 
 
 def integral():
@@ -41,7 +41,7 @@ def integral():
     n, x1, x0 = input().split(" ")
     n, x1, x0 = float(n), float(x1), float(x0)
     integral = Integral(n, x1, x0)
-    integral.calc_integral()
+    print(integral.calc_integral())
 
 
 def main():
@@ -49,11 +49,12 @@ def main():
     print(
         "1. Решение уравнений\n2. Решение матричных операций\n3. Решение интегралов\n"
     )
-    if input() == 1:
+    sol = input()
+    if sol == "1":
         equation()
-    elif input() == "2":
+    elif sol == "2":
         matrix()
-    elif input() == "3":
+    elif sol == "3":
         integral()
     else:
         print(f"К сожалению мы пока не умеем это делать :(")
