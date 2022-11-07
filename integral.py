@@ -14,8 +14,11 @@ class Integral:
     def calc_integral(self):
         def func(x):
             return x + self.n
+
         ans, err = integrate.quad(func, self.x1, self.x0)
-        return f'Результат вычисления интеграла ∫(x + {self.n})dx = {ans}'
+        return f"Результат вычисления интеграла ∫(x + {self.n})dx = {ans}"
 
     def draw_integral(self):
-        return f'Ваш интеграл - ∫(x + {self.n})dx, с границами от {self.x1} до {self.x0}'
+        return (
+            f"Ваш интеграл - ∫(x + {self.n})dx, с границами от {self.x1} до {self.x0}"
+        )
